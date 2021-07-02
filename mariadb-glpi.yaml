@@ -35,7 +35,7 @@ spec:
         name: mysql-glpi
         env:
         - name: MYSQL_DATABASE
-          value: "glpi"
+          value: "testing"
         - name: MYSQL_ROOT_PASSWORD
           value: "root"
         - name: MYSQL_USER
