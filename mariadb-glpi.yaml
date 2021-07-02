@@ -9,7 +9,7 @@ spec:
   ports:
   - port: 3306
   selector:
-    app: mysql-glpi
+    app: mysqli
   clusterIP: None
 
 ---
@@ -22,17 +22,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: mysql-glpi
+      app: mysqli
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql-glpi
+        app: mysqli
     spec:
       containers:
       - image: mysql:5.7
-        name: mysql-glpi
+        name: mysqli
         env:
         - name: MYSQL_DATABASE
           value: "testing"
@@ -44,7 +44,7 @@ spec:
           value: "glpi"
         ports:
         - containerPort: 3306
-          name: mysql-glpi        
+          name: mysqli        
         volumeMounts:
         - name: mariadb-glpi-persistent-storage
           mountPath: /var/lib/mysql
