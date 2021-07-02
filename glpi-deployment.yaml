@@ -34,14 +34,14 @@ spec:
       - image: hatoua20s/glpipfe:v1
         name: glpi
         env:
-        - name: GLPI_LANG  
-          value: "pt_BR"
+       - name: MYSQL_ROOT_PASSWORD
+          value: "root"
         - name: MYSQL_HOST
           value: "mysql-glpi"
         - name: MYSQL_PORT
           value: "3306"
         - name: MYSQL_DATABASE
-          value: "glpi"
+          value: "testing"
         - name: MYSQL_USER
           value: "glpi"
         - name: MYSQL_PASSWORD
