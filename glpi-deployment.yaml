@@ -31,13 +31,13 @@ spec:
         app: glpi
     spec:
       containers:
-      - image: hatoua20s/glpipfe:v1
+      - image:  khouildisihem/app-pfe:v.34
         name: glpi
         env:
        - name: MYSQL_ROOT_PASSWORD
           value: "root"
         - name: MYSQL_HOST
-          value: "mysql-glpi"
+          value: "mysqli"
         - name: MYSQL_PORT
           value: "3306"
         - name: MYSQL_DATABASE
